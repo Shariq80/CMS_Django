@@ -1,0 +1,33 @@
+<style>
+  .hello-msg{
+    font-size: 18px;
+    color: black;
+    margin-right: 20px;
+  }
+  #heading{
+    color: black;
+    font-weight: bolder;
+    font-size: xx-large;
+  }
+</style>
+
+<center>
+  <nav class="navbar navbar-expand-md navbar-dark fixed-top" style="background-color: rgb(24, 219, 141);">
+    <div class="container">
+      <div class="row justify-content-start">
+        <div class="col-xl align-self-center">
+          <a id="heading" class="navbar-brand" href="/">(CMS) CLINIC MANAGEMENT SYSTEM</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+      </div>
+      <div class="row justify-content-end">
+        <div class="col-sm align-self-center" style="align-self: center;">
+          <span class="hello-msg">Hello, {{request.user}}</span>
+          <span ><a class="hello-msg" href="{% url 'logoutuser' %}"> Logout</a></span>  
+        </div>
+      </div>
+    </div>
+  </nav>
+</center>
